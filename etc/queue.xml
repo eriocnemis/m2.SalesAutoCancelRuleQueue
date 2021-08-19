@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Eriocnemis, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework-message-queue:etc/queue.xsd">
+    <broker topic="eriocnemis_sales.autocancel.order" exchange="magento-db" type="db">
+        <queue
+            name="eriocnemis_sales.autocancel"
+            consumer="eriocnemis_sales.autocancel.order"
+            consumerInstance="Magento\Framework\MessageQueue\BatchConsumer"
+            handler="Eriocnemis\SalesAutoCancelRuleQueue\Model\Consumer::process"/>
+    </broker>
+</config>

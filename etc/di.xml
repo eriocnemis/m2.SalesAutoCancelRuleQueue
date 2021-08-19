@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © Eriocnemis, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- plugin -->
+    <type name="Eriocnemis\SalesAutoCancelRule\Api\CancelOrdersByRuleInterface">
+        <plugin name="eriocnemis_sales_autocancel_rule_queue" type="Eriocnemis\SalesAutoCancelRuleQueue\Plugin\Api\CancelOrdersByRulePlugin"/>
+    </type>
+    <type name="Magento\Framework\MessageQueue\MergerFactory">
+        <arguments>
+            <argument name="mergers" xsi:type="array">
+                <item name="eriocnemis_sales.autocancel.order" xsi:type="string">Eriocnemis\SalesAutoCancelRuleQueue\Model\Merger</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
