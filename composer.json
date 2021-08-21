@@ -1,0 +1,32 @@
+{
+    "name": "eriocnemis/module-sales-autocancel-rule-queue",
+    "description": "The module allows you to perform asynchronous order cancellation operations.",
+    "type": "magento2-module",
+    "version": "2.3.1",
+    "authors": [{
+        "name": "Eriocnemis Team",
+        "email": "dev.eriocnemis@gmail.com"
+    }],
+    "license": [
+        "OSL-3.0"
+    ],
+    "require": {
+        "magento/framework": "102.0.*",
+        "magento/framework-bulk": "100.3.*",
+        "magento/framework-message-queue": "100.3.*",
+        "magento/module-config": "101.1.*",
+        "magento/module-sales": "102.0.*",
+        "magento/module-store": "101.0.*",
+        "magento/module-asynchronous-operations": "100.3.*",
+        "eriocnemis/module-sales-autocancel-rule-api": "2.3.*",
+        "eriocnemis/module-sales-autocancel-rule": "2.3.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Eriocnemis\\SalesAutoCancelRuleQueue\\": ""
+        }
+    }
+}
