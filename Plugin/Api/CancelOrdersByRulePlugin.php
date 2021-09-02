@@ -63,7 +63,7 @@ class CancelOrdersByRulePlugin
         CancelOrdersByRuleInterface $subject,
         callable $proceed,
         RuleInterface $rule
-    ) {
+    ): void {
         if (!$this->helper->isAsynchronous()) {
             $proceed($rule);
         } else {
