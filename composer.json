@@ -3,10 +3,12 @@
     "description": "The module allows you to perform asynchronous order cancellation operations.",
     "type": "magento2-module",
     "version": "2.3.1",
-    "authors": [{
-        "name": "Eriocnemis Team",
-        "email": "dev.eriocnemis@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Eriocnemis Team",
+            "email": "dev.eriocnemis@gmail.com"
+        }
+    ],
     "license": [
         "OSL-3.0"
     ],
