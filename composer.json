@@ -2,7 +2,7 @@
     "name": "eriocnemis/module-sales-autocancel-rule-queue",
     "description": "The module allows you to perform asynchronous order cancellation operations.",
     "type": "magento2-module",
-    "version": "2.4.1",
+    "version": "2.4.2",
     "authors": [
         {
             "name": "Eriocnemis Team",
